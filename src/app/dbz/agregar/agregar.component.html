@@ -1,0 +1,14 @@
+<h3>Agregar <small>{{nuevo.nombre}}</small></h3>
+    <hr>
+    <form (ngSubmit)="agregar()">
+        <!-- Al poner paréntesis sobre ngModel, le estamos pidiendo a Angular que no solo reciba el evento, si no que lo emita 
+        Representa el concepto de two-way data binding -->
+        
+        <input type="text" placeholder="Nombre" name="nombre" [(ngModel)] = "nuevo.nombre"/>
+
+        <!-- [value]="nuevo.nombre" (input)="cambiarNombre( $event )" -->
+
+        <input type="number" placeholder="Poder" name="poder" [(ngModel)]="nuevo.poder"/>
+
+        <button type="submit">Agregar</button>
+    </form>
